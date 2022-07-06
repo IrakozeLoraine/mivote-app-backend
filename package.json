@@ -16,7 +16,6 @@
     "joi": "^17.6.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.4.1",
-    "swagger-jsdoc": "^6.2.1",
     "swagger-ui-express": "^4.4.0"
   },
   "devDependencies": {
