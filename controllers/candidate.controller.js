@@ -34,7 +34,9 @@ exports.createCandidate = async (req, res) => {
 
 exports.getCandidatesByPoll = async (req, res) => {
   try {
-    const candidates = await Candidate.find({ poll_id: req.params.poll_id });
+    const candidates = await Candidate.find({ poll_id: req.params.poll_id })
+      .populate('user')
+      .populate('poll');
     return res
       .status(200)
       .send({ message: 'Candidates retrieved!', data: candidates });

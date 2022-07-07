@@ -15,7 +15,7 @@ exports.createPoll = async (req, res) => {
 
 exports.getPolls = async (req, res) => {
   try {
-    const polls = await Poll.find();
+    const polls = await Poll.find().populate('candidates').populate('author');
     return res.status(200).send({ message: 'Polls retrieved!', data: polls });
   } catch (error) {
     return res.status(400).send(error.message);

@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
 const CandidateSchema = mongoose.Schema({
-  user_id: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-  poll_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Poll' },
+  user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+  poll: { type: mongoose.Schema.Types.ObjectId, ref: 'Poll' },
   votes: { type: Number, default: 1 },
   bio: {
     type: String,
